@@ -1,0 +1,38 @@
+{
+  "name": "trackingtag",
+  "version": "0.0.18",
+  "description": "Widerplanet Tracking Tag Install",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "exports": {
+    ".": {
+      "require": "./src/index.cjs",
+      "default": "./src/index.js"
+    }
+  },
+  "keywords": [
+    "vue",
+    "react",
+    "myelinsoft",
+    "tracking",
+    "widerplanet"
+  ],
+  "author": {
+    "name": "Andrew Mok",
+    "email": "mokgoon@myelinsoft.com",
+    "url": "https://myelinsoft.com"
+  },
+  "homepage": "https://myelinsoft.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "babel-jest": "^29.6.1",
+    "esbuild": "^0.18.11",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1"
+  }
+}
