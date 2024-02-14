@@ -1,6 +1,6 @@
 {
-  "name": "trackingtag",
-  "version": "0.0.18",
+  "name": "tracking/tag",
+  "version": "0.0.19",
   "description": "Widerplanet Tracking Tag Install",
   "main": "src/index.js",
   "type": "module",
@@ -27,6 +27,13 @@
   },
   "homepage": "https://myelinsoft.com",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myelinsoft/tracking-tag"
+  },
+  "dependencies": {
+    "gtm-support/core": "^2.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",

@@ -1,4 +1,4 @@
-import { getCurrentUrl, parseCookies } from './utils';
+import { getCurrentUrl, parseCookies } from '../../TrackingTagCore/src/utils.js';
 
 export function createGa() {
   try {
