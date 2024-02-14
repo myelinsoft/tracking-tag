@@ -1,4 +1,4 @@
-import { getCurrentUrl, parseCookies } from 'trackingtag-core/src/utils.js';
+import { getCurrentUrl, parseCookies } from 'trackingtag-core';
 
 export function createGa() {
   try {
@@ -20,49 +20,31 @@ export function createGa() {
   }
 }
 
-export function createTrackingTag(option) {
+function createTrackingTag(option) {
   try {
-    const { ti, items, ty } = option;
     const url = new URL('https://astg.widerplanet.com/delivery/wpc.php');
-    const cookies = parseCookies();
+    const queryParams = new URLSearchParams({
+      v: '1',
+      ver: 'npm',
+      r: '1',
+      md: 'bs',
+      ga: createGa(),
+      wp_uid: parseCookies()._wp_uid,
+      ti: option.ti,
+      device: 'web',
+      charset: 'UTF-8',
+      tc: new Date().getTime(),
+      loc: getCurrentUrl(),
+      ty: option.ty || 'Home',
+    });
 
-    const queryParams = new URLSearchParams();
-    queryParams.set('v', '1');
-    queryParams.set('ver', 'npm');
-    queryParams.set('r', '1');
-    queryParams.set('md', 'bs');
-    queryParams.set('ga', createGa());
-    queryParams.set('wp_uid', cookies._wp_uid);
-
-    queryParams.set('ti', ti);
-    queryParams.set('device', 'web');
-    queryParams.set('charset', 'UTF-8');
-    queryParams.set('tc', new Date().getTime());
-    queryParams.set('loc', getCurrentUrl());
-
-    if (items && items.length > 0) {
-      items.forEach((item, index) => {
-        const { i, t, p, q } = item;
-        queryParams.set(`i${index}`, i);
-        queryParams.set(`t${index}`, t);
-
-        if (p) queryParams.set(`p${index}`, p);
-        if (q) queryParams.set(`q${index}`, q);
+    if (option.items && option.items.length > 0) {
+      option.items.forEach((item, index) => {
+        queryParams.set(`i${index}`, item.i);
+        queryParams.set(`t${index}`, item.t);
+        if (item.p) queryParams.set(`p${index}`, item.p);
+        if (item.q) queryParams.set(`q${index}`, item.q);
       });
-    }
-
-    switch (ty) {
-      case 'Item':
-        queryParams.set('ty', 'Item');
-        break;
-      case 'Cart':
-        queryParams.set('ty', 'Cart');
-        break;
-      case 'PurchaseComplete':
-        queryParams.set('ty', 'PurchaseComplete');
-        break;
-      default:
-        queryParams.set('ty', 'Home');
     }
 
     url.search = queryParams.toString();
@@ -74,6 +56,7 @@ export function createTrackingTag(option) {
     console.error('Error occurred while creating tracking tag:', error);
   }
 }
+
 
 export function TgTag(option) {
   createTrackingTag(option);
