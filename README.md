@@ -11,13 +11,13 @@
 ## Install
 
 ```shell
-npm install trackingtag
+npm i tracking-tag
 ```
 
 ## Usage
 ### Home
 ```js
-import { TgTag } from 'trackingtag'
+import { TgTag } from 'tracking-tag'
 
 TgTag({
   ti: "Your AD ID",
@@ -27,7 +27,7 @@ TgTag({
 
 ### Item
 ```js
-import { TgTag } from 'trackingtag'
+import { TgTag } from 'tracking-tag'
 
 TgTag({
   ti: "Your AD ID",
@@ -40,7 +40,7 @@ TgTag({
 
 ### Cart
 ```js
-import { TgTag } from 'trackingtag'
+import { TgTag } from 'tracking-tag'
 
 TgTag({
   ti: "Your AD ID",
@@ -54,7 +54,7 @@ TgTag({
 
 ### PurchaseComplete
 ```js
-import { TgTag } from 'trackingtag'
+import { TgTag } from 'tracking-tag'
 
 TgTag({
   ti: "Your AD ID",
