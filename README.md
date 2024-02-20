@@ -22,8 +22,10 @@ npm i tracking-tag
 import { TgTag } from 'tracking-tag'
 
 TgTag({
+  wp_hcuid: "",
   ti: "Your AD ID",
-  ty: "Home"
+  ty: "Home",
+  device: "web"
 })
 ```
 
@@ -33,11 +35,13 @@ TgTag({
 import { TgTag } from 'tracking-tag'
 
 TgTag({
+  wp_hcuid: "",
   ti: "Your AD ID",
   ty: "Item",
   items:[
     {i:"Items ID",t:"Items Name"},
-  ]
+  ],
+  device: "web"
 })
 ```
 
@@ -48,12 +52,14 @@ TgTag({
 import { TgTag } from 'tracking-tag'
 
 TgTag({
+  wp_hcuid: "",
   ti: "Your AD ID",
   ty: "Cart",
   items:[
     {i:"Items ID",t:"Items Name"},
     {i:"Items ID",t:"Items Name"},
-  ]
+  ],
+  device: "web"
 })
 ```
 
@@ -63,12 +69,14 @@ TgTag({
 import { TgTag } from 'tracking-tag'
 
 TgTag({
+  wp_hcuid: "",
   ti: "Your AD ID",
   ty: "PurchaseComplete",
   items:[
     {i:"Item ID", t:"Item Name1", p:"Item Price1", q:"Item quantity1"},
     {i:"Item ID", t:"Item Name2", p:"Item Price2", q:"Item quantity2"},
-  ]
+  ],
+  device: "web"
 })
 ```
 
