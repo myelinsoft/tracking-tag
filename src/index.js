@@ -1,4 +1,4 @@
-import { getCurrentUrl, parseCookies } from 'trackingtag-core';
+import { getCurrentUrl, parseCookies } from 'tracking-tag-core';
 
 export function createGa() {
   try {
@@ -29,14 +29,17 @@ function createTrackingTag(option) {
       r: '1',
       md: 'bs',
       ga: createGa(),
-      wp_uid: option.option.wp_hcuid || parseCookies()._wp_uid,
       ti: option.ti,
-      device: option.option.wp_hcuid || 'web',
+      device: option.device || 'web',
       charset: 'UTF-8',
       tc: new Date().getTime(),
       loc: getCurrentUrl(),
       ty: option.ty || 'Home',
     });
+
+    if(option.wp_hcuid){
+      queryParams.set('wp_uid', option.wp_hcuid);
+    }
 
     if (option.items && option.items.length > 0) {
       option.items.forEach((item, index) => {
