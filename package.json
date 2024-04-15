@@ -35,7 +35,7 @@
     "trackingtag-core": "^0.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.9",
+    "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.22.9",
     "babel-jest": "^29.6.1",
     "esbuild": "^0.18.11",
