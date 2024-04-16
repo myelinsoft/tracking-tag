@@ -9,12 +9,11 @@ export default function Home() {
 
   useEffect(() => {
     TgTag({
-      wp_hcuid: "",
       ti: "54805",
       ty: "Home",
       device: "web"
     })
-  }, [0]);
+  }, []);
 
 
   return (
