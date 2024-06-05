@@ -1,0 +1,68 @@
+{
+  "name": "koreanair-skyshop-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "dev:prod": "env-cmd -f .env.prod.local next dev -p 3000",
+    "dev:jin": "next dev -p 3003",
+    "dev:secure": "node server.js",
+    "build": "next build",
+    "build:dev": "env-cmd -f .env.dev next build",
+    "build:prod": "env-cmd -f .env.prod next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "exports": {
+    ".": {
+      "require": "./src/index.cjs",
+      "default": "./src/index.js"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.6",
+    "axios": "^1.2.1",
+    "crypto-js": "^4.2.0",
+    "date-fns": "^2.29.3",
+    "env-cmd": "^10.1.0",
+    "history": "^5.3.0",
+    "html-react-parser": "^3.0.4",
+    "jwt-decode": "^3.1.2",
+    "next": "12.3.4",
+    "next-progress": "^2.2.0",
+    "qs": "^6.11.0",
+    "react": "18.2.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-cookie": "^4.1.1",
+    "react-datepicker": "^4.11.0",
+    "react-daum-postcode": "^3.1.1",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
+    "react-hook-form": "^7.40.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-js-pagination": "^3.0.3",
+    "react-pro-sidebar": "^1.0.0-alpha.3",
+    "react-scroll": "^1.8.9",
+    "react-to-print": "^2.14.12",
+    "recoil": "^0.7.6",
+    "recoil-persist": "^4.2.0",
+    "sass": "^1.69.5",
+    "styled-components": "^5.3.5",
+    "swiper": "^8.4.7",
+    "tracking-tag": "^0.0.47",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.7.1",
+    "redux-devtools-extension": "^2.13.9"
+  }
+}
