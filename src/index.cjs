@@ -1,4 +1,4 @@
-const { getCurrentUrl, parseCookies } = require('trackingtag-core');
+const { getCurrentUrl, parseCookies } = require('../../trackingtag-core');
 
 function createGa() {
   try {
