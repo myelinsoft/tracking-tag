@@ -32,7 +32,7 @@
     "url": "https://github.com/myelinsoft/tracking-tag"
   },
   "dependencies": {
-    "trackingtag-core": "^0.0.5"
+    "trackingtag-core": "^0.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
