@@ -2,8 +2,8 @@
   "name": "tracking-tag",
   "version": "0.0.40",
   "description": "Widerplanet Tracking Tag Install",
-  "main": "src/index.js",
   "type": "module",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
